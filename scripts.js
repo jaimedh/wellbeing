@@ -11,7 +11,7 @@ var validInput = false
 while (validInput==false) {
   let totalTime = prompt('Enter a number for the length of your desired breath cylce')
 
-  // If is a valid number
+  // If # is a valid number
   if (!isNaN(totalTime)) {
     var totalTimeSeconds = totalTime * 1000
     var breatheTime = (totalTimeSeconds / 5) * 2
@@ -19,10 +19,21 @@ while (validInput==false) {
     breatheAnimation()
     validInput = true
   }
-  else {
- alert (`${totalTime} is not a number! Please enter a number.`)
+//if number is not valid
+  else if (isNaN(totalTime)) {
+    let totalTime = 8
+    var totalTimeSeconds = totalTime * 1000
+    var breatheTime = (totalTimeSeconds / 5) * 2
+    var holdTime = totalTimeSeconds / 5
+    breatheAnimation()
+    validInput = true
+  }
 }
-}
+//   else {
+//
+//  alert (`${totalTime} is not a number! Please enter a number.`)
+// }
+
 
 // var totalTime = false;
 // while (validNumber>0) {
