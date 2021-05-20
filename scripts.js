@@ -4,8 +4,41 @@ const text = document.querySelector(`#text`)
 // const breathlength= document.querySelector('name.breathfield');
 // console.log(`${breathfield}`);
 
-let totalTime = prompt('Enter a number for the length of your desired breath cylce')
+
+// var validNumber=0;
+
+var validInput = false
+while (validInput==false) {
+  let totalTime = prompt('Enter a number for the length of your desired breath cylce')
+
+  // If is a valid number
+  if (!isNaN(totalTime)) {
+    var totalTimeSeconds = totalTime * 1000
+    var breatheTime = (totalTimeSeconds / 5) * 2
+    var holdTime = totalTimeSeconds / 5
+    breatheAnimation()
+    validInput = true
+  }
+  else {
+ alert (`${totalTime} is not a number! Please enter a number.`)
+}
+}
+
+// var totalTime = false;
+// while (validNumber>0) {
 //
+// if(validNumber.includes(totalTime))
+// {
+// breatheAnimation()
+//
+// }
+// else {
+// alert (`${totalTime} is not a number! Please enter a number.`)
+// }
+// }
+
+
+
 // const wrapper = document.querySelector('wrapper'),
 //   form= wrapper.querySelectorAll('.form')
 //   submitInput =form[0].querySelector('input [type=submit]');
@@ -25,13 +58,10 @@ let totalTime = prompt('Enter a number for the length of your desired breath cyl
 
 
 // var totalTime=3
-const totalTimeSeconds = totalTime * 1000
-const breatheTime = (totalTimeSeconds / 5) * 2
-const holdTime = totalTimeSeconds / 5
 
-breatheAnimation()
 
 function breatheAnimation () {
+
   text.innerHTML = 'Inhale'
   container.className= 'container grow'
 
@@ -47,3 +77,4 @@ function breatheAnimation () {
   }, breatheTime)
 }
 setInterval(breatheAnimation, totalTimeSeconds)
+// totalTime=true;
