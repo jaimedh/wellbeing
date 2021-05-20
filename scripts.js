@@ -77,4 +77,3 @@ function breatheAnimation () {
   }, breatheTime)
 }
 setInterval(breatheAnimation, totalTimeSeconds)
-// totalTime=true;
