@@ -88,3 +88,6 @@ function breatheAnimation () {
   }, breatheTime)
 }
 setInterval(breatheAnimation, totalTimeSeconds)
+
+// code adapted from
+// https://www.youtube.com/watch?v=l-1ZrU6avzI
