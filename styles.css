@@ -5,7 +5,10 @@ body {
 }
 
 img {
+  display: block;
   padding:20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .navbar {
@@ -172,15 +175,18 @@ h2{
 }
 
 .cyclescontainer {
-  display:flex;
-  padding: 20px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-gap: 2em;
+  /* padding: 20px; */
+
 
 }
 
 .item {
-  flex-grow:1;
+  /* flex-grow:1;
   padding:30px;
-  margin:10px;
+  margin:10px; */
 }
 
 .box-item-1 {
