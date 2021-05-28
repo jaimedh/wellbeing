@@ -178,8 +178,7 @@ h2{
   display:grid;
   grid-template-columns:1fr 1fr;
   grid-gap: 2em;
-
-  /* padding: 20px; */
+  padding: 20px;
 
 
 }
